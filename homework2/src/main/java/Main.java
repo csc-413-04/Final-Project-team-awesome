@@ -124,5 +124,40 @@ public class Main {
                     break;
                 }
             }
+//IF the output = success...
+            if (output == "success") {
+                output = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+                MongoIterable<Document> date_i = authCollect.find();
+                MongoCursor<Document> date_c = date_i.iterator();
+                //iterate through the authCollect to check for previous token for the user
+                while (date_c.hasNext()) {
+                    Document token = date_c.next();
+                    // System.out.println(token.get("user"));
+                    // deletes the document if there are previous tokens
+                    if (token.get("user").equals(username)) {
+                        authCollect.findOneAndDelete(token);
+                    }
+                }
+
+                // adds new token to authCollect
+                Document token = new Document();
+                token.append("token", output).append("user", username).append("password", password);
+                authCollect.insertOne(token);
+                String dataContent = "{\n" +
+                        "\t\"username\":" +"\""+username+"\""+",\n" +
+                        "\t\"password\":" +"\""+password+"\""+"\n" +
+                        "}";
+                data_writer.Write(dataContent);
+                res.redirect("http://localhost:3000/");
+            }
+            //Document document = new Document("username", username);
+            //document.append("username", username).append("password",password);
+            else {
+                res.redirect("http://localhost:3000/login/alreadyexists");
+            }
+
+
+            return output;
+        });
 
 
