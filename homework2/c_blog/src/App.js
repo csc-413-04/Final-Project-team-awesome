@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import logo from './logo.svg';
-import HomePage from "./Component/homepage";
-import Success from "./Component/success";
-import Already_Exists from "./Component/already_exists";
+import HomePage from "./Component/signup/homepage";
+import Success from "./Component/signup/success";
+import Already_Exists from "./Component/signup/already_exists";
 import Intro from "./Component/intro";
 import LoginForm from './Component/login/loginform';
 import SuccessLog from './Component/login/success_log';
 import AlreadyUser from './Component/login/already_user';
+import NavBar from './Component/navbar';
 import CreatePost from './Component/post/create_post';
 import MyPost from './Component/post/my_post';
 import Post from './Component/post/post';
-import NavBar from './Component/navbar';
 import './App.css';
 
 class App extends Component {
@@ -20,22 +20,19 @@ class App extends Component {
       <BrowserRouter>
       <div>
         <Route exact path="/" component={Intro}/>
+        <Route exact path="/post" component={Post}/>
         <Route exact path="/signup" component={HomePage}/>
         <Route exact path="/signup/success"  component={Success}/>
         <Route exact path="/signup/alreadyexists" component={Already_Exists} />
         <Route exact path="/login" component={LoginForm} />
-        <Route exact path="/login/success" component={SuccessLog} />
         <Route exact path="/login/alreadyexists" component={AlreadyUser} />
         <Route exact path="/createpost" component={CreatePost} />
         <Route exact path="/mypost" component={MyPost} />
       </div>
-
       </BrowserRouter>
 
     );
   }
 }
-
-
 
 export default App;
