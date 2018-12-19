@@ -27,3 +27,21 @@ class Post extends Component {
             <div class="container">
             <table class="table">
             <thead>
+             <tr>
+                    <th>Archive</th>
+                </tr>
+            </thead>
+            <tbody>
+            {this.state.posts.map((keys)=>{
+                if (keys.username===this.state.username) {
+                    this.state.trueorfalse = true;
+                }
+                else {
+                    this.state.trueorfalse = false;
+                }
+                
+               return <tr>
+               <td>{keys.title}</td>
+               </tr>
+               
+            })}
