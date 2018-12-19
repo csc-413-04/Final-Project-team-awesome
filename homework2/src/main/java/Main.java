@@ -161,3 +161,81 @@ public class Main {
         });
 
 
+        //add friend
+        get("/addfriend", (req, res) -> {
+            int count = 0;
+            //query token
+            String token = req.queryParams("token");
+            //parse the friend value to an int
+            int friend_id = Integer.parseInt(req.queryParams("friend"));
+            //arraylist to store the updated "friends" key
+            ArrayList<Integer> copy_f = new ArrayList<Integer>();
+            //default output
+            String output = "failed_authentication";
+            //MongoIterable and Mongocursore to iterate through the autoCollect
+            MongoIterable<Document> token_i = authCollect.find();
+            MongoCursor<Document> token_c = token_i.iterator();
+            // Document for updating purposes
+            Document copy = new Document();
+            // Document for deleting purposes
+            Document delete = new Document();
+
+            // While there are documents in authCollect...
+            while (token_c.hasNext()) {
+                Document token_identifier = token_c.next();
+                // if the token matches, it will iterate through userCollect to see which one to add friend
+                if (token_identifier.get("token").equals(token)) {
+                    //output changes to okay
+                    output = "fail_authentication";
+                    //MongoIterable and MongoCursor to iterate through userCollect
+                    MongoIterable<Document> user_i = userCollect.find();
+                    MongoCursor<Document> user_c = user_i.iterator();
+                    // checks which document in userCollect to update
+                    while (user_c.hasNext()) {
+                        Document user_identifier = user_c.next();
+                        // dummy ArrayList
+                        ArrayList<Object> doc = (ArrayList<Object>) user_identifier.get("friends");
+                        // one for updating...
+                        copy = user_identifier;
+                        // one for deleting...
+                        delete = user_identifier;
+                        //System.out.println(doc);
+
+                        /*if username is not null and the username matches... it first
+                         *deletes the original document in the userCollect
+                         *then update them on the "copy" document
+                         */
+                        if (user_identifier.get("username") != null && user_identifier.get("username").equals(token_identifier.get("user")) && userCollect.count() > 1) {
+                            userCollect.findOneAndDelete(user_identifier);
+                            MongoIterable<Document> friend_i = userCollect.find();
+                            MongoCursor<Document> friend_c = friend_i.iterator();
+                            while (friend_c.hasNext()) {
+                                Document friend_doc = friend_c.next();
+                                // adds the friend to dummy array if all the condition meets
+                                if (friend_doc.get("id") != null && friend_doc.get("id") != user_identifier.get("id") && friend_doc.get("id").equals(friend_id)) {
+
+                                    for (int i = 0; i < doc.size(); i++) {
+                                        if (friend_doc.get("username").equals(doc.get(i))) {
+                                            count = 2;
+                                            break;
+                                        }
+
+                                    }
+                                    if (count != 2) {
+                                        count = 1;
+                                        doc.add(friend_doc.get("username"));
+                                        output = "okay";
+                                        System.out.println(doc);
+                                        break;
+                                    }
+                                }
+                                // throws an error if the user adds him/herself into the friendlist
+
+                                else {
+                                    output = "failed_authentication";
+                                }
+
+                            }
+
+
+
