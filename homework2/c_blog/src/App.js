@@ -26,6 +26,8 @@ class App extends Component {
         <Route exact path="/login" component={LoginForm} />
         <Route exact path="/login/success" component={SuccessLog} />
         <Route exact path="/login/alreadyexists" component={AlreadyUser} />
+        <Route exact path="/createpost" component={CreatePost} />
+        <Route exact path="/mypost" component={MyPost} />
       </div>
 
       </BrowserRouter>
