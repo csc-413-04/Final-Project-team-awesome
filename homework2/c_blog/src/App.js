@@ -8,6 +8,7 @@ import Intro from "./Component/intro";
 import LoginForm from './Component/login/loginform';
 import SuccessLog from './Component/login/success_log';
 import AlreadyUser from './Component/login/already_user';
+import CreatePost from './Component/post/create_post';
 import NavBar from './Component/navbar';
 import './App.css';
 
