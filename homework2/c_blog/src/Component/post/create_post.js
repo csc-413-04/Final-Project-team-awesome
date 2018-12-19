@@ -21,6 +21,9 @@ class CreatePost extends Component {
                     <br/>
                     <form action={this.state.link} method="GET">
                     <input style={{width:1, height: 1, position:'relative', bottom: 500}} name="username" value= {TextData.username}/> <br/>
+                    Title:<br/>
+                        <input type="text" name="title" />
+                        <br/>
                     </form> 
             </div>
         );
