@@ -9,4 +9,16 @@ import ReactDOM from 'react-dom'
 
 var values;
 
-class Post extends Component {}
+class Post extends Component {
+  constructor(props) {
+        super();
+        this.state = {
+          username: TextData.username,
+          link: "http://localhost:4321/create_post",
+          posts: PostData.posts,
+          trueorfalse: true,
+          
+        }
+
+      }
+}
