@@ -1,3 +1,5 @@
+//first part is fixed
+
 import java.io.*;
 import java.util.*;
 public class WriteData {
@@ -9,7 +11,9 @@ public class WriteData {
 
     }
 
-    void Write(String content) {
+  
+
+    void Write(String content) { //FIXED
         String file_temp= "c_blog/src/dataText.json";
         FileWriter fw=null;
         try {
