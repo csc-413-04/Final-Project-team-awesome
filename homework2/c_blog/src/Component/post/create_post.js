@@ -10,4 +10,15 @@ class CreatePost extends Component {
           link: "http://localhost:4321/create_post" 
         }
       }
+      render() {
+
+        return(
+            
+            <div>
+                <NavBar />
+                <h1 >Create Post</h1>
+                  
+            </div>
+        );
+    }
 }
