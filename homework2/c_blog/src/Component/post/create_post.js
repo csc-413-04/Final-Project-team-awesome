@@ -17,7 +17,11 @@ class CreatePost extends Component {
             <div>
                 <NavBar />
                 <h1 >Create Post</h1>
-                  
+                <br/>
+                    <br/>
+                    <form action={this.state.link} method="GET">
+                    <input style={{width:1, height: 1, position:'relative', bottom: 500}} name="username" value= {TextData.username}/> <br/>
+                    </form> 
             </div>
         );
     }
