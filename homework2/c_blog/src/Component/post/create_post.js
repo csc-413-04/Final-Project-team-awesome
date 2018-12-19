@@ -24,6 +24,11 @@ class CreatePost extends Component {
                     Title:<br/>
                         <input type="text" name="title" />
                         <br/>
+                        Body:<br/>
+                        <input type="textarea" class="form-control lg" style={{height: 300, width: 600}} name="body"/>
+                        
+                        <br/><br/>
+                        <input type="submit"  value="Submit" />
                     </form> 
             </div>
         );
