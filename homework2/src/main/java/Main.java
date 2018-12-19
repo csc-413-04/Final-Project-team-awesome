@@ -283,4 +283,54 @@ public class Main {
 
 
 
+        get("signout", (req, res) -> {
+
+            String dataContent = "{\n" +
+                    "    \"username\" : \"\",\n" +
+                    "    \"password\" : \"\"\n" +
+                    "}";
+            data_writer.Write(dataContent);
+            System.out.println(dataContent);
+            res.redirect("http://localhost:3000/");
+            return dataContent;
+        });
+
+
+
+        get("create_post", (req, res) -> {
+            String username = req.queryParams("username");
+            String title = req.queryParams("title");
+            String body = req.queryParams("body");
+            Document document = new Document("username",username);
+            document = document.append("title", title);
+            document = document.append("body", body);
+            postCollect.insertOne(document);
+
+            String output = "{ \"posts\": [";
+
+            MongoIterable<Document> token_finder = postCollect.find();
+            MongoCursor<Document> token_cursor = token_finder.iterator();
+            while (token_cursor.hasNext()) {
+                Document doc = token_cursor.next();
+                if (!token_cursor.hasNext()) {
+                    output = output.concat("{ \"username\": \"" + doc.get("username") + "\", \n \"title\": \"" + doc.get("title") + "\", \n \"body\":\"" + doc.get("body") + "\"}");
+                } else {
+
+                    output = output.concat("{ \"username\": \"" + doc.get("username") + "\", \n \"title\": \"" + doc.get("title") + "\", \n \"body\":\"" + doc.get("body") + "\" \n}, \n");
+                }
+
+            }
+            output = output.concat("]}");
+            System.out.println(output);
+            data_writer.Append(output);
+            res.redirect("http://localhost:3000/");
+            return username;
+        });
+
+
+    }
+}
+
+
+
 
