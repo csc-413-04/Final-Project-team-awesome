@@ -1,3 +1,5 @@
+//first part is fixed
+
 import java.io.*;
 import java.util.*;
 public class WriteData {
