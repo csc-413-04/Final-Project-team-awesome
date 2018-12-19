@@ -45,3 +45,14 @@ class Post extends Component {
                </tr>
                
             })}
+            
+               </tbody>
+          
+            </table>
+            </div>
+            </div>
+        );
+    }
+}
+
+export default Post;
