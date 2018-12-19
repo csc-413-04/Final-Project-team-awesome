@@ -21,4 +21,46 @@ class Post extends Component {
         }
 
       }
+render() {        
+        return(          
+           
+            <div>
+                <NavBar />
+                
+                <div class="container">
+                <table class="table">
+                <thead>
+                    <tr>
+                        <th>{this.state.username}'s posts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {this.state.posts.map((keys)=>{
+                    if (keys.username===this.state.username) {
+                        this.state.trueorfalse = true;
+                    }
+                    else {
+                        this.state.trueorfalse = false;
+                    }
+                    
+                   return <tr>
+                       <td style={{display: this.state.trueorfalse ? 'block' : 'none' }}>
+                        <Popup style={{}} trigger={<a href="#">{keys.title}</a>}>
+                        {keys.body}
+                        </Popup>
+                       </td>           
+                   </tr>
+                   
+                })}
+                </tbody>
+              
+                </table>
+                </div>
+
+            
+            </div>
+        );
+    }
 }
+
+export default Post;
