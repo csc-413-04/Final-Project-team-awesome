@@ -101,5 +101,28 @@ public class Main {
             return output;
         });
         //user - Login
+        get("/login", (req, res) -> {
+
+            String output = "";
+            String username = req.queryParams("username");
+            System.out.println(username);
+            String password = req.queryParams("password");
+            System.out.println(password);
+            MongoIterable<Document> iterable = userCollect.find();
+            MongoCursor<Document> cursor = iterable.iterator();
+            output = "fail";
+            //while there's still documents in the collection...
+            while (cursor.hasNext()) {
+                Document doc = cursor.next();
+                //System.out.println(doc);
+
+                //
+                if (doc.get("username") != null && doc.get("password") != null && doc.get("username").equals(username) && doc.get("password").equals(password)) {
+                    System.out.println(doc.get("username"));
+                    System.out.println(doc.get("password"));
+                    output = "success";
+                    break;
+                }
+            }
 
 
