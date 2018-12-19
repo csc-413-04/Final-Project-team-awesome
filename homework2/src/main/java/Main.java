@@ -238,4 +238,49 @@ public class Main {
                             }
 
 
+                            // remove the friends key
+                            copy.remove("friends");
+                            // add the friends key with updated arraylist
+                            copy.append("friends", doc);
+                            System.out.println(copy);
+                            break;
+                        }
+                    }
+
+                }
+            }
+            //System.out.println(delete);
+            //add the "copy" document to the userCollect
+            userCollect.insertOne(copy);
+
+
+            return output;
+        });
+        get("friends", (req, res) -> {
+            String output = "";
+            String token = req.queryParams("token");
+            MongoIterable<Document> token_finder = authCollect.find();
+            MongoCursor<Document> token_cursor = token_finder.iterator();
+            while (token_cursor.hasNext()) {
+                Document token_dummy = token_cursor.next();
+                if (token_dummy.get("token").equals(token)) {
+                    MongoIterable<Document> user_finder = userCollect.find();
+                    MongoCursor<Document> user_cursor = user_finder.iterator();
+                    while (user_cursor.hasNext()) {
+                        Document user_dummy = user_cursor.next();
+                        if (user_dummy.get("username").equals(token_dummy.get("user"))) {
+                            ArrayList<Object> friend_list = (ArrayList<Object>) user_dummy.get("friends");
+                            for (int i = 0; i < friend_list.size(); i++) {
+                                output = output.concat((String) friend_list.get(i) + "<br/>");
+
+                            }
+                        }
+                    }
+                }
+            }
+            return output;
+        });
+
+
+
 
