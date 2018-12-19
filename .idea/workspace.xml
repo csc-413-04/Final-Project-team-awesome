@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf094220-9189-477e-b9df-94016d574d91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/homework2/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework2/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c_blog/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/c_blog/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,36 +21,49 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="1" />
+          <entry key="js" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="1" />
+          <entry key="JavaScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="16" />
+          <entry key="js" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="16" />
+          <entry key="JavaScript" value="8" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework2/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="331" column="1" selection-start-line="331" selection-start-column="1" selection-end-line="331" selection-end-column="1" />
+            <state relative-caret-position="257">
+              <caret line="329" lean-forward="true" selection-start-line="329" selection-end-line="329" />
               <folding>
                 <element signature="e#0#3303#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/c_blog/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -71,6 +84,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/homework2/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/c_blog/src/App.js" />
       </list>
     </option>
   </component>
@@ -95,28 +109,13 @@
             <path>
               <item name="Final-Project-team-awesome" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final-Project-team-awesome" type="462c0819:PsiDirectoryNode" />
-              <item name="homework2" type="462c0819:PsiDirectoryNode" />
+              <item name="c_blog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Final-Project-team-awesome" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final-Project-team-awesome" type="462c0819:PsiDirectoryNode" />
-              <item name="homework2" type="462c0819:PsiDirectoryNode" />
+              <item name="c_blog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Final-Project-team-awesome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final-Project-team-awesome" type="462c0819:PsiDirectoryNode" />
-              <item name="homework2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Final-Project-team-awesome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final-Project-team-awesome" type="462c0819:PsiDirectoryNode" />
-              <item name="homework2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -163,10 +162,10 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -185,18 +184,28 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/homework2/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="331" column="1" selection-start-line="331" selection-start-column="1" selection-end-line="331" selection-end-column="1" />
+        <state relative-caret-position="257">
+          <caret line="329" lean-forward="true" selection-start-line="329" selection-end-line="329" />
           <folding>
             <element signature="e#0#3303#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c_blog/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
