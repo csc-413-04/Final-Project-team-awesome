@@ -24,6 +24,15 @@ class LoginForm extends Component {
     handlePasswordChange(event) {
         this.setState({password: event.target.value});
     }
-
+  
+    handleSubmit(event) {
+      
+      if(this.state.username === null ||  this.state.username.length <1) {
+          alert("Please enter your username");
+          event.returnValue = false;
+          event.preventDefault();
+      }
+       
+    }
 }
 export default LoginForm;
