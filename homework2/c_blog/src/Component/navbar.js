@@ -4,7 +4,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGr
 class NavBar extends Component {
     render () {
         return(
-            <div>
+            <MDBContainer>
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
     
@@ -44,6 +44,7 @@ class NavBar extends Component {
                           </div>
                           <button type="submit" class="btn btn-default">Submit</button>
                         </form>
+            
                         <ul class="nav navbar-nav navbar-right">
                             
                           <li><a href="/login">Sign-in</a></li>
@@ -54,7 +55,7 @@ class NavBar extends Component {
                       </div>
                     </div>
                   </nav>
-            </div>
+            </MDBContainer>
         );
     }
 }
