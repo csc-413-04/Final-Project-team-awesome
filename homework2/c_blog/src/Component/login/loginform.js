@@ -12,6 +12,9 @@ class LoginForm extends Component {
         
         
         }
+        this.handleUserChange = this.handleUserChange.bind(this);
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
      }
 
 }
