@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import NavBar from '../navbar';
 import TextData from '../../dataText.json';
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
 
 class CreatePost extends Component {
     constructor(props) {
