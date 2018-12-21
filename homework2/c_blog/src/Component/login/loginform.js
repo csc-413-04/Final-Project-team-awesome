@@ -16,6 +16,10 @@ class LoginForm extends Component {
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
      }
-
+     
+     handleUserChange(event) {
+        this.setState({username: event.target.value});
+    }
+  
 }
 export default LoginForm;
