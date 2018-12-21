@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import NavBar from '../navbar';
+import FooterReact from '../../Component/footer';
 import TextData from '../../dataText.json';
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
 
@@ -30,7 +31,8 @@ class CreatePost extends Component {
                         
                         <br/><br/>
                         <input type="submit"  value="Submit" />
-                    </form> 
+                    </form>
+                <FooterReact/>
             </div>
         );
     }
