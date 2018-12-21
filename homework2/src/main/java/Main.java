@@ -327,7 +327,14 @@ public class Main {
             return username;
         });
 
-
+        get("result", (req, res) -> {
+            String search = req.queryParams("search");
+            String output =  "";
+            output = output.concat("{\"result\": \""+search +"\" }");
+            data_writer.Result(output);
+            res.redirect("http://localhost:3000/result?search=" + search);
+            return search;
+        });
     }
 }
 
