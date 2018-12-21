@@ -33,6 +33,13 @@ class LoginForm extends Component {
           event.preventDefault();
       }
        
+      if(this.state.password === null ||  this.state.password.length <1) {
+          alert("Please enter your password");
+          event.returnValue = false;
+          event.preventDefault();
+      }
+  
+     
     }
 }
 export default LoginForm;
