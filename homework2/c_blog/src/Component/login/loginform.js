@@ -48,6 +48,7 @@ class LoginForm extends Component {
       }
     }
       render() {
+          
         return (
             <MDBContainer fluid>
                 <NavBar />
