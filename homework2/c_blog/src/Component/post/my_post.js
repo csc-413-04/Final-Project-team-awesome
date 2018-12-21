@@ -6,6 +6,7 @@ import Popup from "reactjs-popup";
 import SweetAlert from "react-bootstrap-sweetalert";
 import { check } from '../navbar_action/checkUser';
 import ReactDOM from 'react-dom'
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
 
 var values;
 
