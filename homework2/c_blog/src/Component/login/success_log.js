@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import NavBar from '../navbar';
+import FooterReact from '../footer';
 import Success from '../success';
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
 
