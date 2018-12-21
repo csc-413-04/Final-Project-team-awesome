@@ -62,9 +62,10 @@ public class WriteData {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        get("result", (req, res) -> {
-            String search = req.queryParams("search");
-
-        });
     }
+
+    void Result(String query) {
+        String file_temp = "c_blog/src/query.json";
+        FileWriter fw=null;
+        try {
 }
