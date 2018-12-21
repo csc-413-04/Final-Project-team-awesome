@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import NavBar from '../navbar';
-import FooterReact from '../footer';
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
-
+import FooterReact from '../footer';
 class LoginForm extends Component {
 
     constructor(props){
@@ -19,7 +18,7 @@ class LoginForm extends Component {
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
      }
-     
+
      handleUserChange(event) {
         this.setState({username: event.target.value});
     }
@@ -47,15 +46,15 @@ class LoginForm extends Component {
           event.returnValue = true;
       }
     }
-      render() {
-          
+    render() {
         return (
-            <MDBContainer fluid>
+            <div>
+                       <MDBContainer fluid>
                 <NavBar />
       <MDBRow>
         <MDBCol class="col-lg-3"></MDBCol>
         <MDBCol class="col-lg-3">
-          <form action="http://localhost:4321/login?" method="get">
+          <form action="http://localhost:4321/login?" method="get" onSubmit={this.handleSubmit}>
             <p className="h5 text-center mb-4">Sign in</p>
             <div className="grey-text">
               <MDBInput
@@ -64,6 +63,8 @@ class LoginForm extends Component {
                 group
                 type="text"
                 name="username"
+                value = {this.state.username}
+                onChange = {this.handleUserChange}
                 
               />
               <MDBInput
@@ -72,6 +73,8 @@ class LoginForm extends Component {
                 name="password"
                 group
                 type="password"
+                value = {this.state.password}
+                onChange = {this.handlePasswordChange}
                 
               />
             </div>
@@ -90,8 +93,7 @@ class LoginForm extends Component {
       </MDBRow>
       <FooterReact/>
     </MDBContainer>
-                        
+            </div>
         );
     }
 }
-export default LoginForm;
