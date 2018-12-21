@@ -46,21 +46,47 @@ class LoginForm extends Component {
     }
       render() {
         return (
-            <div>
-                        <NavBar />
-                        <h1>Log-in</h1>
-                        <br />
-                        <br />
-                        <form action="http://localhost:4321/login?" method="GET" onSubmit={this.handleSubmit}>
-                        Username:<br/>
-                        <input type="text" name="username" value={this.state.username} onChange={this.handleUserChange} />
-                        <br/>
-                        Password:<br/>
-                        <input type="text" name="password" value={this.state.password} onChange={this.handlePasswordChange}/>
-                        <br/><br/>
-                        <input type="submit"  value="Submit" />
-                    </form> 
+            <MDBContainer fluid>
+                <NavBar />
+      <MDBRow>
+        <MDBCol class="col-lg-3"></MDBCol>
+        <MDBCol class="col-lg-3">
+          <form action="http://localhost:4321/login?" method="get">
+            <p className="h5 text-center mb-4">Sign in</p>
+            <div className="grey-text">
+              <MDBInput
+                label="Username"
+                icon="envelope"
+                group
+                type="text"
+                name="username"
+                
+              />
+              <MDBInput
+                label="Password"
+                icon="lock"
+                name="password"
+                group
+                type="password"
+                
+              />
             </div>
+            <div className="text-center">
+              <MDBBtn color="primary"type="submit" value="Submit">Login</MDBBtn>
+            </div>
+          </form >
+        </MDBCol>
+        <MDBCol class="col-lg-3"></MDBCol>
+      </MDBRow>
+      
+      <MDBRow >
+          <MDBCol style={{height: 100}}>
+          
+          </MDBCol>
+      </MDBRow>
+      <FooterReact/>
+    </MDBContainer>
+                        
         );
     }
 }
