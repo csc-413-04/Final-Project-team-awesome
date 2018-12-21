@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PostData from '../../post.json';
 import TextData from '../../dataText.json';
 import NavBar from '../../Component/navbar';
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
 
 class Post extends Component {
 	
