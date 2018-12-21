@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import NavBar from './navbar';
 import cooking_blog from '../picture/cooking.jpg';
 import sell_out from '../picture/sell_out.jpg';
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
+
 class Intro extends Component {
 
 
