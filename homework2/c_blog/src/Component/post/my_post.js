@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import NavBar from '../navbar';
+import FooterReact from '../footer';
 import TextData from '../../dataText.json';
 import PostData from '../../post.json';
 import Popup from "reactjs-popup";
 import SweetAlert from "react-bootstrap-sweetalert";
 import { check } from '../navbar_action/checkUser';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
 
 var values;
@@ -58,7 +60,7 @@ render() {
                 </table>
                 </div>
 
-            
+            <FooterReact/>
             </div>
         );
     }
