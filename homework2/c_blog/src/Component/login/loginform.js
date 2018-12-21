@@ -21,5 +21,9 @@ class LoginForm extends Component {
         this.setState({username: event.target.value});
     }
   
+    handlePasswordChange(event) {
+        this.setState({password: event.target.value});
+    }
+
 }
 export default LoginForm;
