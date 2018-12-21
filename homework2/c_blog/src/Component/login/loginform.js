@@ -43,8 +43,25 @@ class LoginForm extends Component {
           alert("Success");
           event.returnValue = true;
       }
-    
-   
+    }
+      render() {
+        return (
+            <div>
+                        <NavBar />
+                        <h1>Log-in</h1>
+                        <br />
+                        <br />
+                        <form action="http://localhost:4321/login?" method="GET" onSubmit={this.handleSubmit}>
+                        Username:<br/>
+                        <input type="text" name="username" value={this.state.username} onChange={this.handleUserChange} />
+                        <br/>
+                        Password:<br/>
+                        <input type="text" name="password" value={this.state.password} onChange={this.handlePasswordChange}/>
+                        <br/><br/>
+                        <input type="submit"  value="Submit" />
+                    </form> 
+            </div>
+        );
     }
 }
 export default LoginForm;
