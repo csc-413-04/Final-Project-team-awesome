@@ -62,5 +62,9 @@ public class WriteData {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        get("result", (req, res) -> {
+            String search = req.queryParams("search");
+
+        });
     }
 }
