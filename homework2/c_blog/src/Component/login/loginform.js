@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import NavBar from '../navbar';
+import FooterReact from '../footer';
+
 class LoginForm extends Component {
 
     constructor(props){
