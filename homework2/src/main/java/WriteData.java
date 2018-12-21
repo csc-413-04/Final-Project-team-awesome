@@ -76,4 +76,11 @@ public class WriteData {
             String text=query;
             out.write(text);
             out.close();
+        }
+     catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+}
+
 }
