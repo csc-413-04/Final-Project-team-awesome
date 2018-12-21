@@ -313,10 +313,11 @@ public class Main {
             while (token_cursor.hasNext()) {
                 Document doc = token_cursor.next();
                 if (!token_cursor.hasNext()) {
-                    output = output.concat("{ \"username\": \"" + doc.get("username") + "\", \n \"title\": \"" + doc.get("title") + "\", \n \"body\":\"" + doc.get("body") + "\"}");
+                    output = output.concat(com.mongodb.util.JSON.serialize(doc));
+                    // output = output.concat("{ \"username\": \"" + doc.get("username") + "\", \n \"title\": \"" + doc.get("title") + "\", \n \"body\":\"" + doc.get("body") + "\"}");
                 } else {
-
-                    output = output.concat("{ \"username\": \"" + doc.get("username") + "\", \n \"title\": \"" + doc.get("title") + "\", \n \"body\":\"" + doc.get("body") + "\" \n}, \n");
+                    output = output.concat(com.mongodb.util.JSON.serialize(doc) +",");
+                   // output = output.concat("{ \"username\": \"" + doc.get("username") + "\", \n \"title\": \"" + doc.get("title") + "\", \n \"body\":\"" + doc.get("body") + "\" \n}, \n");
                 }
 
             }
