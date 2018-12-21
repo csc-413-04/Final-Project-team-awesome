@@ -68,4 +68,12 @@ public class WriteData {
         String file_temp = "c_blog/src/query.json";
         FileWriter fw=null;
         try {
+            File file = new File(file_temp);
+
+            BufferedWriter bw =new BufferedWriter(new FileWriter(file));
+            PrintWriter out = new PrintWriter(bw);
+
+            String text=query;
+            out.write(text);
+            out.close();
 }
