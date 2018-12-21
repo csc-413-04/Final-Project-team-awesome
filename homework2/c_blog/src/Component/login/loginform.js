@@ -39,7 +39,12 @@ class LoginForm extends Component {
           event.preventDefault();
       }
   
-     
+      else {
+          alert("Success");
+          event.returnValue = true;
+      }
+    
+   
     }
 }
 export default LoginForm;
