@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import PostData from '../../post.json';
 import TextData from '../../dataText.json';
 import NavBar from '../../Component/navbar';
+import FooterReact from '../../Component/footer';
+
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBListGroup, MDBListGroupItem, Col, Container, Row } from 'mdbreact';
 
 class Post extends Component {
@@ -51,6 +53,7 @@ class Post extends Component {
           
             </table>
             </div>
+		<FooterReact/>
             </div>
         );
     }
