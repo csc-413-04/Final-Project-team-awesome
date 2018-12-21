@@ -52,6 +52,7 @@ class Post extends Component {
                </tbody>
           
             </table>
+
             </div>
 		<FooterReact/>
             </div>
